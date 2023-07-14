@@ -5,13 +5,16 @@ import com.zincat.springapi.common.repository.UserRepo;
 import com.zincat.springapi.user.service.UserService;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+/**
+ * author: Menaka Lakshan
+ */
+
 @Service
 public class UserServiceImpl implements UserService {
 
     private final UserRepo userRepo;
 
-    public UserServiceImpl(UserRepo userRepo ){
+    public UserServiceImpl(UserRepo userRepo) {
         this.userRepo = userRepo;
     }
 

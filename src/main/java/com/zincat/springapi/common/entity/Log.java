@@ -2,7 +2,10 @@ package com.zincat.springapi.common.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.util.Date;
+
+/**
+ * author: Menaka Lakshan
+ */
 
 @Entity
 @Getter
@@ -20,10 +23,10 @@ public class Log {
     private Long logId;
 
     @Column(name = "logged_date")
-    private Date loggedDate;
+    private java.sql.Date loggedDate;
 
     @Column(name = "logged_time")
-    private Date loggedTime;
+    private java.sql.Time loggedTime;
 
     @ManyToOne
     @JoinColumn(name = "log_type_id")

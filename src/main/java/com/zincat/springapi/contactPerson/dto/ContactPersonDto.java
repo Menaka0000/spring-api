@@ -1,9 +1,10 @@
 package com.zincat.springapi.contactPerson.dto;
 
-import com.zincat.springapi.common.entity.Customer;
 import lombok.*;
 
-import java.util.Set;
+/**
+ * author: Menaka Lakshan
+ */
 
 @Getter
 @Setter

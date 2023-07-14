@@ -5,6 +5,10 @@ import lombok.*;
 
 import java.util.Set;
 
+/**
+ * author: Menaka Lakshan
+ */
+
 @Entity
 @Getter
 @Setter
@@ -22,6 +26,6 @@ public class CustomerType {
     @Column(length = 50 , columnDefinition = "varchar(50)")
     private String type;
 
-    @OneToMany(mappedBy = "customerTypeId")
+    @OneToMany(mappedBy = "customerType")
     private Set<Customer> customers;
 }

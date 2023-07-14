@@ -6,6 +6,10 @@ import com.zincat.springapi.contactPerson.service.ContactPersonService;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
+/**
+ * author: Menaka Lakshan
+ */
+
 @Service
 @Transactional
 public class ContactPersonServiceImpl implements ContactPersonService {

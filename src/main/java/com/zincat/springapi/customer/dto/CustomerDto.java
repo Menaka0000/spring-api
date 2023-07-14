@@ -1,10 +1,14 @@
 package com.zincat.springapi.customer.dto;
 
 import com.zincat.springapi.contactPerson.dto.ContactPersonDto;
+import com.zincat.springapi.customerType.dto.CustomerTypeDto;
 import lombok.*;
 
 import java.util.Set;
 
+/**
+ * author: Menaka Lakshan
+ */
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -15,6 +19,7 @@ import java.util.Set;
 public class CustomerDto {
     private Long customerId;
     private Long customerTypeId;
+    private CustomerTypeDto customerTypeDto;
     private String customerCode;
     private String refNo;
     private String customerName;

@@ -3,8 +3,14 @@ package com.zincat.springapi.common.entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.util.Set;
+
+/**
+ * author: Menaka Lakshan
+ */
 
 @Entity
 @Getter
@@ -30,8 +36,9 @@ public class ContactPerson {
     private String email;
 
 
-    @ManyToMany
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JsonIgnore
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinTable(name = "customer_contact_person", joinColumns = @JoinColumn(name = "contact_person_id"),
             inverseJoinColumns = @JoinColumn(name = "customer_id"))
     private Set<Customer> customers;
